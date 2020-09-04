@@ -40,10 +40,13 @@ wss.on('connection', function connection(ws) {
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
+    console.log(client);
 });
 
 client.on('message', msg => {
-    switch (msg.content.split(" ")[0]) {
+    if(msg.author.id !== client.user.id) //wasn't me
+    if(msg.content.split(" ")[0].split("")[0] == config.prefix)//Goede prefix?
+    switch (msg.content.split(" ")[0].split(config.prefix)[1]) {
         case "info":
             fetch(config.api.base + config.api.nasaNrEndpoint + msg.content.split(" ")[1])
                 .then(response => response.json())
@@ -105,7 +108,7 @@ client.on('message', msg => {
                 });
             break;
         default:
-            return false;
+            msg.reply(`je begon zo goed, maar na de '${config.prefix}' ging je de verkeerde kant op. Probeer het eens met een van mijn commando's: info, zoek\n`);
     }
 });
 
