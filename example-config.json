@@ -1,0 +1,9 @@
+{
+    "token": "",
+    "api": {
+        "base": "https://ah.nl",
+         "nasaNrEndpoint": "/zoeken/api/products/product?hqid=",
+         "searchEndpoint": "/zoeken/api/products/search?size=1&&query="
+    },
+    "channelName": ""
+}
