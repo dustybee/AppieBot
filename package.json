@@ -1,0 +1,26 @@
+{
+  "name": "appiebot",
+  "version": "1.0.0",
+  "description": "AH Discord bot",
+  "main": "app.js",
+  "dependencies": {
+    "bufferutil": "^4.0.1",
+    "discord.js": "^12.2.0",
+    "node-fetch": "^2.6.0",
+    "ws": "^7.3.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dustybee/AppieBot.git"
+  },
+  "author": "dustybee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dustybee/AppieBot/issues"
+  },
+  "homepage": "https://github.com/dustybee/AppieBot#readme"
+}
